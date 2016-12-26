@@ -1,0 +1,17 @@
+{
+    "name": "exp/forum",
+    "description": "forum",
+    "type": "project",
+    "require": {
+        "laravel/laravel": "^5.3",
+        "laravelcollective/html": "^5.3",
+        "cviebrock/eloquent-sluggable": "^4.1"
+    },
+    "license": "test",
+    "authors": [
+        {
+            "name": "vhieu",
+            "email": "vhieuictu@gmail.com"
+        }
+    ]
+}
