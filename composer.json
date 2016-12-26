@@ -2,13 +2,8 @@
     "name": "exp/laraforum",
     "description": "forum",
     "type": "project",
-    "require": {
-        "laravel/laravel": "^5.3",
-        "laravelcollective/html": "^5.3",
-        "cviebrock/eloquent-sluggable": "^4.1"
-    },
     "require-dev": {
-        "laravel/laravel": "^5.3.28",
+        "laravel/laravel": "5.3.28",
         "laravelcollective/html": "^5.3",
         "cviebrock/eloquent-sluggable": "^4.1"
     },
