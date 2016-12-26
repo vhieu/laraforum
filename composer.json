@@ -13,7 +13,11 @@
             "name": "vhieu",
             "email": "vhieuictu@gmail.com"
         }
+<<<<<<< HEAD
     ],
 
     "minimum-stability":"dev"
+=======
+    ]
+>>>>>>> 956b61442d383dbf9989cd1dc6c4ed2361738c84
 }
