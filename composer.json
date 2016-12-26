@@ -1,5 +1,5 @@
 {
-    "name": "exp/forum",
+    "name": "exp/laraforum",
     "description": "forum",
     "type": "project",
     "require": {
