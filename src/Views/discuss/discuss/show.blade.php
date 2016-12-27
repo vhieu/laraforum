@@ -380,7 +380,7 @@
             @else
                 <p class="has-text-centered mt-3">
 
-                    <a href="{{route('login')}}">
+                    <a href="{{route('forum.login')}}">
                         Sign In
                     </a> or
                     <a href="{{route('forum.register',['title'=>"Okay, we'll have you posting on the forum in no time!"])}}">create

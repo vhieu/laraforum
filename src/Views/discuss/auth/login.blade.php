@@ -7,7 +7,7 @@
         <div class="section is-normal">
             <div class="container">
                 {{Form::open([
-                    'url'=>route('login'),
+                    'url'=>route('forum.login'),
                     'class'=>"signup-form columns is-multiline",
                 ])}}
                 {{ csrf_field() }}

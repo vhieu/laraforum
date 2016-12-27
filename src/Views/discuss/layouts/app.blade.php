@@ -106,7 +106,7 @@
                             Sign Up
                         </a>
 
-                        <a href="{{route('login')}}" class="nav-item is-bold color-primary in-caps">
+                        <a href="{{route('forum.login')}}" class="nav-item is-bold color-primary in-caps">
                             Sign In
                         </a>
                     </div>
