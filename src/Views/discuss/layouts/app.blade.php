@@ -102,7 +102,7 @@
                         <span></span>
                     </span>
                     <div class="nav-right nav-menu">
-                        <a class="nav-item is-bold in-caps" href="{{route('register')}}">
+                        <a class="nav-item is-bold in-caps" href="{{route('forum.register')}}">
                             Sign Up
                         </a>
 

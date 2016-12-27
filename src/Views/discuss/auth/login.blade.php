@@ -49,7 +49,7 @@
                             @endif
                         </div>
                         <footer class="is-flex is-justified-space-between">
-                            <a href="{{route('register')}}">
+                            <a href="{{route('forum.register')}}">
                                 Sign Up!
                             </a>
                             <p class="color-success">

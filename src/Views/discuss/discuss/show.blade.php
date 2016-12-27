@@ -383,7 +383,7 @@
                     <a href="{{route('login')}}">
                         Sign In
                     </a> or
-                    <a href="{{route('register',['title'=>"Okay, we'll have you posting on the forum in no time!"])}}">create
+                    <a href="{{route('forum.register',['title'=>"Okay, we'll have you posting on the forum in no time!"])}}">create
                         a forum account to participate in this discussion.</a>
                 </p>
             @endif

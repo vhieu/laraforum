@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'password.confirmed'=>'Password confirmation does not match.Try again, please.',
         ];
     }
-    public function register()
+    public function show()
     {
         return view('forum::'.config('laraforum.template').'.auth.register');
     }

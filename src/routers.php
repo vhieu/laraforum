@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Exp\Laraforum\Controllers',
 
     Auth::routes();
     Route::get('/logout', 'Auth\LoginController@logout')->name('forum.logout');
-    Route::get('/register', 'Auth\RegisterController@register')->name('forum.register');
+    Route::get('/register', 'Auth\RegisterController@show')->name('forum.register');
+    Route::post('/register/store.','Auth\RegisterController@show')->name('forum.register.store');
 
 });
