@@ -14,8 +14,13 @@ class LaraforumServiceProvider extends ServiceProvider
         include __DIR__ . '/routers.php';
         $this->loadViewsFrom(__DIR__ . '/Views', 'forum');
         $this->loadMigrationsFrom(__DIR__.'/Migrations','laraforum');
-        $this->publishes([__DIR__.'/resources/public'=>public_path('forum')],'public');
         $this->mergeConfigFrom(__DIR__.'/resources/config/laraforum.php','config');
+
+        $this->publishes([__DIR__.'/resources/public'=>public_path('forum')],'public');
+        $this->publishes([
+            __DIR__.'/resources/config/laraforum.php' => config_path('laraforum.php')
+        ], 'config');
+
     }
 
     /**

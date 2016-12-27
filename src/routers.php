@@ -32,15 +32,4 @@ Route::group(['namespace' => 'Exp\Laraforum\Controllers',
 
 
 
-
-
-
-
-
-    Route::get('/test',function (){
-        return config('laraforum.template','null');
-    });
-
-
-
 });
