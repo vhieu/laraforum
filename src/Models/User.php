@@ -1,6 +1,6 @@
 <?php
 
-namespace Exp\Discuss\Models;
+namespace Exp\Laraforum\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

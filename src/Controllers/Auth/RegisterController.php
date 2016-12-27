@@ -1,10 +1,10 @@
 <?php
 
-namespace Exp\Discuss\Controllers\Auth;
+namespace Exp\Laraforum\Controllers\Auth;
 
-use Exp\Discuss\Models\Country;
-use Exp\Discuss\Models\Profile;
-use Exp\Discuss\Models\User;
+use Exp\Laraforum\Models\Country;
+use Exp\Laraforum\Models\Profile;
+use Exp\Laraforum\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'forum/discuss';
+    protected $redirectTo = 'laraforum/discuss';
 
     /**
      * Create a new controller instance.
@@ -73,7 +73,7 @@ class RegisterController extends Controller
     }
     public function register()
     {
-        return view('forum::auth.register');
+        return view('forum::'.config('laraforum.template').'.auth.register');
     }
 
     /**

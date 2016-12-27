@@ -1,6 +1,6 @@
 <?php
 
-namespace Exp\Discuss\Requests;
+namespace Exp\Laraforum\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;

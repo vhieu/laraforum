@@ -1,4 +1,4 @@
-@extends('forum::layouts.app')
+@extends('forum::'.config('laraforum.template').'.layouts.app')
 @section('content')
     <section class="hero is-desktop is-primary is-bold pb-0-desktop">
         <div class="hero-body">

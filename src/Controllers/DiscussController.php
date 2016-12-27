@@ -1,12 +1,12 @@
 <?php
 
-namespace Exp\Discuss\Controllers;
+namespace Exp\Laraforum\Controllers;
 
-use Exp\Discuss\Models\Channel;
-use Exp\Discuss\Requests\StoreDiscussRequest;
-use Exp\Discuss\Models\Post;
-use Exp\Discuss\Models\Thread;
-use Exp\Discuss\Models\User;
+use Exp\Laraforum\Models\Channel;
+use Exp\Laraforum\Requests\StoreDiscussRequest;
+use Exp\Laraforum\Models\Post;
+use Exp\Laraforum\Models\Thread;
+use Exp\Laraforum\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -51,7 +51,7 @@ class DiscussController extends Controller
             $post->is_liked = (in_array($post->id, $user_liked_in_thread)) ? true : false;
         }
         $channels = Channel::all();
-        return view('forum::discuss.show')->with(['thread' => $thread, 'posts' => $posts, 'user' => $user, 'channels' => $channels]);
+        return view('forum::'.config('laraforum.template').'.discuss.show')->with(['thread' => $thread, 'posts' => $posts, 'user' => $user, 'channels' => $channels]);
     }
 
     /**
@@ -83,7 +83,7 @@ class DiscussController extends Controller
                 }
                 $threads = $threads->sortByDesc('posts_count');
                 $threads->links = ($order->total() != $order->count()) ? $order->links() : '';
-                return view('forum::discuss.index')
+                return view('forum::'.config('laraforum.template').'.discuss.index')
                     ->with(['threads' => $threads, 'user' => $user, 'message' => $message, 'search' => $search, 'channels' => $channels]);
                 break;
             }
@@ -100,7 +100,7 @@ class DiscussController extends Controller
                 }
                 $threads = $threads->sortByDesc('posts_count');
                 $threads->links = ($order->total() != $order->count()) ? $order->links() : '';
-                return view('forum::discuss.index')
+                return view('forum::'.config('laraforum.template').'.discuss.index')
                     ->with(['threads' => $threads, 'user' => $user, 'message' => $message, 'search' => $search, 'channels' => $channels]);
                 break;
             }
@@ -164,7 +164,7 @@ class DiscussController extends Controller
         }
         // add links paginate
         $threads->links = ($threads->total() != $threads->count()) ? $threads->links() : '';
-        return view('forum::discuss.index')
+        return view('forum::'.config('laraforum.template').'.discuss.index')
             ->with(['threads' => $threads, 'user' => $user, 'message' => $message, 'search' => $search, 'channels' => $channels]);
     }
 
@@ -265,7 +265,7 @@ class DiscussController extends Controller
         foreach ($channels_data as $channel) {
             $channels[$channel->id] = title_case($channel->name);
         }
-        return view('forum::discuss.edit')->with(['channels' => $channels, 'user' => $user, 'thread' => $thread]);
+        return view('forum::'.config('laraforum.template').'.discuss.edit')->with(['channels' => $channels, 'user' => $user, 'thread' => $thread]);
     }
 
     public function update(StoreDiscussRequest $request, $thread_id)
@@ -307,7 +307,7 @@ class DiscussController extends Controller
         foreach ($channels_data as $channel) {
             $channels[$channel->id] = title_case($channel->name);
         }
-        return view('forum::discuss.create')->with(['channels' => $channels, 'user' => $user]);
+        return view('forum::'.config('laraforum.template').'.discuss.create')->with(['channels' => $channels, 'user' => $user]);
     }
 
     public function setBestAnswer($thread_id, $post_id)

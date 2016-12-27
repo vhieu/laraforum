@@ -1,4 +1,4 @@
-@extends('forum::layouts.nomal')
+@extends('forum::'.config('laraforum.template').'.layouts.nomal')
 @section('primary')
 
     <h1 class="title is-normal is-3 mbb-1">
@@ -95,7 +95,7 @@
                                             <span class="image is-75x75 mb-1">
                                                 <a href="{{route('profile.show',[$thread->answer->user->name])}}">
                                                     <img src="{{
-                                                    ($avatar = $thread->answer->user->profile->avatar) ? $avatar : asset('forum/images/basic/generic-avatar.png')
+                                                    ($avatar = $thread->answer->user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
                                                     }}" class="is-circle is-outlined bg-white" alt="tomi" width="75">
                                                 </a>
                                             </span>
@@ -188,7 +188,7 @@
                                 <span class="image is-75x75 mb-1">
                                     <a href="{{route('profile.show',[$post->user->name])}}">
                                         <img src="{{
-                                        ($avatar = $post->user->profile->avatar) ? $avatar : asset('forum/images/basic/generic-avatar.png')
+                                        ($avatar = $post->user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
                                         }}" class="is-circle is-outlined bg-white" alt="{{$post->user->name}}" width="75">
                                     </a>
                                 </span>
@@ -311,7 +311,7 @@
                                         ])}}
                                         <button type="submit" class="edit-reply-button button is-naked"
                                                 title="Edit your reply.">
-                                            <img src="{{asset('/images/icons/edit.svg')}}" alt="Edit Icon">
+                                            <img src="{{asset('forum/images/icons/edit.svg')}}" alt="Edit Icon">
                                         </button>
                                         {{Form::close()}}
 
@@ -322,7 +322,7 @@
                                         {{method_field('DELETE')}}
                                         <button type="submit" class="button is-naked"
                                                 title="Want to delete this reply?">
-                                            <img src="{{asset('/images/icons/trash.svg')}}" alt="Delete Reply Icon">
+                                            <img src="{{asset('forum/images/icons/trash.svg')}}" alt="Delete Reply Icon">
                                         </button>
                                         {{Form::close()}}
 
@@ -343,7 +343,7 @@
                 <a href="{{route('profile.show',[$user->name])}}">
 
     <img src="{{
-     ($avatar = $user->profile()->first()->avatar) ? $avatar : asset('/images/basic/generic-avatar.png')
+     ($avatar = $user->profile()->first()->avatar) ? $avatar : asset('forum/images/basic/generic-avatar.png')
     }}"
          class="is-circle is-outlined bg-white" alt="{{$user->name}}" width="75">
 </a>

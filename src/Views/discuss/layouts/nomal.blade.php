@@ -1,4 +1,4 @@
-@extends('forum::layouts.app')
+@extends('forum::'.config('laraforum.template').'.layouts.app')
 @section('content')
     <div class="wrapper">
         <div class="section">

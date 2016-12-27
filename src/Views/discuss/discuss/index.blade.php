@@ -1,13 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Admin
- * Date: 12/7/2016
- * Time: 9:34 AM
- */
-
-?>
-@extends('forum::layouts.nomal')
+@extends('forum::'.config('laraforum.template').'.layouts.nomal')
 @section('primary')
     <h1 class="title">{{(isset($message)&&$message)?$message:''}}</h1>
     @if($threads->count() === 0)
@@ -27,13 +18,13 @@
                                 </svg>
 
                                 <a href="{{route('profile.show',[$thread->user->name])}}">
-                                <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  asset('forum/images/basic/generic-avatar.png')}}"
+                                <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  config('laraforum.default_avatar')}}"
                                      class="is-circle is-outlined bg-white" alt="sunrise" width="75">
                                 </a>
                                 </span>
                             @else
                                 <a href="{{route('profile.show',[$thread->user->name])}}">
-                                    <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  asset('forum/images/basic/generic-avatar.png')}}"
+                                    <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  config('laraforum.default_avatar')}}"
                                          class="is-circle is-outlined bg-white" alt="sunrise" width="75">
                                 </a>
                             @endif

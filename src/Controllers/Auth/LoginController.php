@@ -1,8 +1,8 @@
 <?php
 
-namespace Exp\Discuss\Controllers\Auth;
+namespace Exp\Laraforum\Controllers\Auth;
 
-use Exp\Discuss\Controllers\Controller;
+use Exp\Laraforum\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'forum/discuss';
+    protected $redirectTo = 'laraforum/discuss';
 
     /**
      * Create a new controller instance.
@@ -38,6 +38,6 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
-        return view('forum::auth.login');
+        return view('forum::'.config('laraforum.template').'.auth.login');
     }
 }

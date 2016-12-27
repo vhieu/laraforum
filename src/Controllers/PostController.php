@@ -1,10 +1,10 @@
 <?php
 
-namespace Exp\Discuss\Controllers;
+namespace Exp\Laraforum\Controllers;
 
-use Exp\Discuss\Models\Post;
-use Exp\Discuss\Models\Thread;
-use Exp\Discuss\Models\User;
+use Exp\Laraforum\Models\Post;
+use Exp\Laraforum\Models\Thread;
+use Exp\Laraforum\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

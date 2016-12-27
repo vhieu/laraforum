@@ -11,10 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{asset('forum/css/min.css')}}" rel="stylesheet">
-    <link href="{{asset('forum/css/rainbow.css')}}" rel="stylesheet">
-    <link href="{{asset('forum/css/font.css')}}" rel="stylesheet">
-    <link href="{{asset('forum/css/font1.css')}}" rel="stylesheet">
+    <link href="{{asset('forum/discuss/css/min.css')}}" rel="stylesheet">
+    <link href="{{asset('forum/discuss/css/rainbow.css')}}" rel="stylesheet">
+    <link href="{{asset('forum/discuss/css/font.css')}}" rel="stylesheet">
+    <link href="{{asset('forum/discuss/css/font1.css')}}" rel="stylesheet">
     <!-- Scripts -->
 
 </head>
@@ -129,7 +129,7 @@
                                             <div class="is-vertically-centered"><span slot="heading-before">
                     <a href="{{route('profile.show',[$user->name])}}">
                         <img src="{{
-                            ($avatar = $user->profile->avatar) ? $avatar : asset('forum/images/basic/generic-avatar.png')
+                            ($avatar = $user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
                         }}"
                              class="is-circle is-outlined bg-white" style="background-color:white" alt="{{$user->name}}"
                              width="50">
@@ -207,6 +207,6 @@
 </div>
 
 <!-- Scripts -->
-{{--<script src="{{asset('forum/js/app.js')}}"></script>--}}
+{{--<script src="{{resources('forum/js/app.js')}}"></script>--}}
 </body>
 </html>

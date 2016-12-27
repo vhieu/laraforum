@@ -1,6 +1,6 @@
 <?php
 
-namespace Exp\Discuss\Models;
+namespace Exp\Laraforum\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
-Route::group(['namespace' => 'Exp\Discuss\Controllers',
-    'prefix' => 'forum',
+Route::group(['namespace' => 'Exp\Laraforum\Controllers',
+    'prefix' => 'laraforum',
     'middleware' => ['web']
 ], function () {
     Route::get('/discuss', 'DiscussController@index')->name('discuss.index');
@@ -38,8 +38,7 @@ Route::group(['namespace' => 'Exp\Discuss\Controllers',
 
 
     Route::get('/test',function (){
-        $a = new Carbon\Carbon('-20 year');
-        $b = \Carbon\Carbon::now();
+        return config('laraforum.template','null');
     });
 
 

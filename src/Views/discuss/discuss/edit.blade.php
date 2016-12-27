@@ -1,4 +1,4 @@
-@extends('layouts.nomal')
+@extends('layouts.'.config('laraforum.template').'.nomal')
 @section('primary')
 
     <div class="box">

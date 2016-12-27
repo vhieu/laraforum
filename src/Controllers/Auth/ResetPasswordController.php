@@ -1,8 +1,8 @@
 <?php
 
-namespace Exp\Discuss\Controllers\Auth;
+namespace Exp\Laraforum\Controllers\Auth;
 
-use Exp\Discuss\Controllers\Controller;
+use Exp\Laraforum\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

@@ -1,9 +1,9 @@
 <?php
 
-namespace Exp\Discuss\Controllers;
+namespace Exp\Laraforum\Controllers;
 
-use Exp\Discuss\Models\Reach;
-use Exp\Discuss\Models\UserReach;
+use Exp\Laraforum\Models\Reach;
+use Exp\Laraforum\Models\UserReach;
 use Illuminate\Support\Facades\Auth;
 
 class ReachController extends Controller

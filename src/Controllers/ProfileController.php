@@ -1,11 +1,11 @@
 <?php
 
-namespace Exp\Discuss\Controllers;
+namespace Exp\Laraforum\Controllers;
 
 use Carbon\Carbon;
-use Exp\Discuss\Models\Country;
-use Exp\Discuss\Requests\UpdateProfileRequest;
-use Exp\Discuss\Models\User;
+use Exp\Laraforum\Models\Country;
+use Exp\Laraforum\Requests\UpdateProfileRequest;
+use Exp\Laraforum\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -69,7 +69,7 @@ class ProfileController extends Controller
         }
         $contents = collect($contents);
         //dd($userpreview);
-        return view('forum::profile.show')->with(['user' => $user, 'userpreview' => $userpreview, 'contents' => $contents]);
+        return view('forum::'.config('laraforum.template').'.profile.show')->with(['user' => $user, 'userpreview' => $userpreview, 'contents' => $contents]);
     }
 
     public function edit($user_name)
@@ -78,6 +78,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         if (!$user || !$userpreview || $user->id != $userpreview->id)
             return redirect()->route($this->redirect_on_fail);
+        $user= User::with('profile')->find($user->id);
         $basic_country = Country::where('short_name', 'us')->first();
         $countries_data = Country::where('short_name', '<>', 'us')->orderBy('name')->get();
         $countries = [];
@@ -85,7 +86,7 @@ class ProfileController extends Controller
         foreach ($countries_data as $country) {
             $countries[$country->id] = $country->name;
         }
-        return view('forum::profile.edit')->with(['user' => $user, 'countries' => $countries, 'userpreview' => $userpreview]);
+        return view('forum::'.config('laraforum.template').'.profile.edit')->with(['user' => $user, 'countries' => $countries, 'userpreview' => $userpreview]);
     }
 
     public function update(UpdateProfileRequest $request, $user_name)

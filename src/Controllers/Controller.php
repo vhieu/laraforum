@@ -1,6 +1,6 @@
 <?php
 
-namespace Exp\Discuss\Controllers;
+namespace Exp\Laraforum\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
