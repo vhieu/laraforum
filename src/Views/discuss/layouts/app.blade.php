@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('laraforum.pagename', 'Laraforum') }}</title>
 
     <!-- Styles -->
     <link href="{{asset('forum/discuss/css/min.css')}}" rel="stylesheet">
@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="nav-left dont-flex mr-2">
                     <a class="nav-item is-brand" href="/">
-                        <font size="5">LARAFORUM</font>
+                        <font size="5">{{config('laraforum.pagename')}}</font>
                     </a>
                 </div>
                 <div class="nav-center flex mr-2">
@@ -138,7 +138,7 @@
                                                 <button class="button has-dropdown w-100"><span
                                                             class="dropdown-heading ml-1 in-caps has-arrow"
                                                             slot="heading">
-                    <span>My LARAFORUM</span>
+                    <span>My {{config('laraforum.pagename')}}</span>
                     <span class="arrow"></span>
                 </span></button>
                                             </div>
