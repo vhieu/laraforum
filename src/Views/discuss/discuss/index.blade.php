@@ -18,13 +18,13 @@
                                 </svg>
 
                                 <a href="{{route('profile.show',[$thread->user->name])}}">
-                                <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  config('laraforum.default_avatar')}}"
+                                <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  asset('forum/discuss/images/basic/generic-avatar.png')}}"
                                      class="is-circle is-outlined bg-white" alt="sunrise" width="75">
                                 </a>
                                 </span>
                             @else
                                 <a href="{{route('profile.show',[$thread->user->name])}}">
-                                    <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  config('laraforum.default_avatar')}}"
+                                    <img src="{{$thread->user->profile->avatar  ? $thread->user->profile->avatar :  asset('forum/discuss/images/basic/generic-avatar.png')}}"
                                          class="is-circle is-outlined bg-white" alt="sunrise" width="75">
                                 </a>
                             @endif

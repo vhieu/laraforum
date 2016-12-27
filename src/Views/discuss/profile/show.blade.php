@@ -9,7 +9,7 @@
                             <div class="media-left mb-1-mobile">
                                 <a href="{{route('profile.show',[$userpreview->name])}}">
                                     <img src="{{
-                                    $userpreview->profile->avatar ? $userpreview->profile->avatar : asset('forum/images/basic/generic-avatar.png')
+                                    $userpreview->profile->avatar ? $userpreview->profile->avatar : asset('forum/discuss/images/basic/generic-avatar.png')
                                     }}" class=" bg-white" style="background-color:white;" alt="{{$userpreview->name}}" width="100">
                                 </a>
                             </div>

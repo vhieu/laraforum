@@ -129,7 +129,7 @@
                                             <div class="is-vertically-centered"><span slot="heading-before">
                     <a href="{{route('profile.show',[$user->name])}}">
                         <img src="{{
-                            ($avatar = $user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
+                            ($avatar = $user->profile->avatar) ? $avatar : asset('forum/discuss/images/basic/generic-avatar.png')
                         }}"
                              class="is-circle is-outlined bg-white" style="background-color:white" alt="{{$user->name}}"
                              width="50">

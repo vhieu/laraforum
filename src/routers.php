@@ -29,7 +29,4 @@ Route::group(['namespace' => 'Exp\Laraforum\Controllers',
     Route::get('/register', 'Auth\RegisterController@register')->name('register');
 
 
-
-
-
 });

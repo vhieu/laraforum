@@ -95,7 +95,7 @@
                                             <span class="image is-75x75 mb-1">
                                                 <a href="{{route('profile.show',[$thread->answer->user->name])}}">
                                                     <img src="{{
-                                                    ($avatar = $thread->answer->user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
+                                                    ($avatar = $thread->answer->user->profile->avatar) ? $avatar : asset('forum/discuss/images/basic/generic-avatar.png')
                                                     }}" class="is-circle is-outlined bg-white" alt="tomi" width="75">
                                                 </a>
                                             </span>
@@ -188,7 +188,7 @@
                                 <span class="image is-75x75 mb-1">
                                     <a href="{{route('profile.show',[$post->user->name])}}">
                                         <img src="{{
-                                        ($avatar = $post->user->profile->avatar) ? $avatar : config('laraforum.default_avatar')
+                                        ($avatar = $post->user->profile->avatar) ? $avatar : asset('forum/discuss/images/basic/generic-avatar.png')
                                         }}" class="is-circle is-outlined bg-white" alt="{{$post->user->name}}" width="75">
                                     </a>
                                 </span>

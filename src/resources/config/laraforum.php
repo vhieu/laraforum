@@ -2,8 +2,7 @@
 
 return [
 
-
-    'default_avatar' => asset('forum/discuss/images/basic/generic-avatar.png'),
+    'default_avatar' => '/images/basic/generic-avatar.png',
     'template'=>'discuss',
     'pagename'=>'Laraforum',
 
